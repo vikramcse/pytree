@@ -34,8 +34,13 @@ def tree(arg, indent=""):
         tree(os.path.join(arg, d), indent=indent + add)
 
 
-for arg in args:
-    try:
-        tree(arg)
-    except Exception as e:
-        print e.message
+def main():
+    for arg in args:
+        try:
+            tree(arg)
+        except Exception as e:
+            print e.message
+
+
+if __name__ == '__main__':
+    main()
